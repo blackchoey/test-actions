@@ -2,7 +2,7 @@ name: Mark stale issues and pull requests
 
 on:
   schedule:
-  - cron: "0 0 * * *"
+  - cron: "* * * * *"
 
 jobs:
   stale:
@@ -10,10 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: blackchoey/stale@v1
+    - uses: blackchoey/stale@v1.2.0
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         stale-issue-message: 'Stale issue message'
         stale-pr-message: 'Stale pull request message'
         stale-issue-label: 'no-issue-activity'
         stale-pr-label: 'no-pr-activity'
+        skip-close-last-commented-by-user: 'true'
