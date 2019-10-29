@@ -16,5 +16,5 @@ jobs:
         stale-issue-message: 'Stale issue message'
         stale-issue-label: 'no-issue-activity'
         days-before-stale: 1
-        only-labels: 'need info'
+        only-labels: 'dependency'
         last-updated-user-type: 'collaborator'
