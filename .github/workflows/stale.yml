@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: blackchoey/stale@v1.2.1
+    - uses: blackchoey/stale@releases/v1.2.0
       with:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         stale-issue-message: 'Stale issue message'
-        stale-pr-message: 'Stale pull request message'
         stale-issue-label: 'no-issue-activity'
-        stale-pr-label: 'no-pr-activity'
-        skip-close-last-commented-by-user: 'true'
+        days-before-stale: 1
+        only-labels: 'need info'
+        last-updated-user-type: 'collaborator'
