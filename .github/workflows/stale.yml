@@ -15,5 +15,7 @@ jobs:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         stale-issue-message: 'Stale issue message'
         stale-issue-label: 'no-issue-activity'
+        only-labels: 'need info'
         days-before-stale: 0
-        last-updated-user-type: 'non-collaborator'
+        last-updated-user-type: 'collaborator'
+        days-before-close: 0
